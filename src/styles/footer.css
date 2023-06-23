@@ -17,3 +17,7 @@ footer div {
   justify-content: center;
   align-items: center;
 }
+
+footer div p {
+  margin: 0;
+}

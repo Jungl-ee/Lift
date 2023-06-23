@@ -1,5 +1,7 @@
+import "../styles/header.css";
+
 function Header({ header }: { header: string }) {
-  return <h1>{header}</h1>;
+  return <h1 className="header">{header}</h1>;
 }
 
 export default Header;
