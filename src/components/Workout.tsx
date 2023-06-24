@@ -1,9 +1,16 @@
+import { AppContextType, useGlobalContext } from "../AppContext";
 import "../styles/workout.css";
 
 function Workout() {
+  const { setIsWorkoutSession } = useGlobalContext() as AppContextType;
   return (
     <div className="workout">
-      <button className="workout-button">START AN EMPTY WORKOUT</button>
+      <button
+        className="workout-button"
+        onClick={() => setIsWorkoutSession((prevValue: boolean) => !prevValue)}
+      >
+        START AN EMPTY WORKOUT
+      </button>
       <div className="my-templates">
         <header>
           <p>My Templates</p>
