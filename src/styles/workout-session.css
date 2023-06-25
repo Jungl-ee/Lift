@@ -1,0 +1,46 @@
+.workout-session {
+  position: absolute;
+  inset: 0;
+  background-color: black;
+}
+
+.workout-session-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: #111111;
+  height: 60px;
+}
+
+.workout-session-header div {
+  display: flex;
+  gap: 2rem;
+}
+
+.workout-session-finish-btn {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #de3163;
+  letter-spacing: 1px;
+  background-color: transparent;
+  border: none;
+}
+
+.workout-session-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 1rem;
+}
+
+.workout-session-info h2 {
+  font-size: 1.75rem;
+  margin: 0;
+}
+
+.workout-session-info p {
+  font-size: 1.25rem;
+  margin: 0;
+  font-weight: 500;
+}
