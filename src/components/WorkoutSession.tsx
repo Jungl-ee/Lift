@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { AppContextType, useGlobalContext } from "../AppContext";
 import Time from "./Time";
 import "../styles/workout-session.css";
@@ -7,6 +7,11 @@ function WorkoutSession() {
   const { setIsWorkoutSession } = useGlobalContext() as AppContextType;
 
   const [workoutName, setWorkoutName] = useState("Workout");
+
+  function editWorkoutName(e: React.ChangeEvent<HTMLInputElement>) {
+    const { value } = e.target;
+    setWorkoutName(value);
+  }
 
   return (
     <div className="workout-session">
@@ -25,8 +30,12 @@ function WorkoutSession() {
         </button>
       </header>
       <div className="workout-session-info">
-        <h2>{workoutName}</h2>
+        <input type="text" value={workoutName} onChange={editWorkoutName} />
         <Time />
+      </div>
+      <div className="workout-session-options">
+        <button>ADD EXERCISE</button>
+        <button>CANCEL WORKOUT</button>
       </div>
     </div>
   );
