@@ -9,11 +9,8 @@ interface Props {
 function ExerciseCard(props: Props) {
   return (
     <div className="exercise-card">
-      <img src="" alt="" />
-      <div>
-        <h4>{props.name}</h4>
-        <p>{props.bodyPart}</p>
-      </div>
+      <img src={props.gifUrl} alt="" />
+      <h4>{props.name}</h4>
     </div>
   );
 }
