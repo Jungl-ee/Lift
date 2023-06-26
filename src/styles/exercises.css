@@ -1,0 +1,14 @@
+.exercises {
+  padding: 1rem 1rem;
+  overflow: hidden;
+}
+
+.exercise-card {
+  height: 70px;
+  display: flex;
+  align-items: center;
+}
+
+.exercise-card * {
+  margin: 0;
+}
