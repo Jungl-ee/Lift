@@ -1,23 +1,26 @@
 .exercises {
+  height: calc(100vh - 150px);
   padding: 1rem;
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  overflow-y: scroll;
 }
 
 .exercise-card {
-  height: 64px;
+  min-height: 64px;
   display: flex;
   align-items: center;
   gap: 1rem;
-  border-bottom: 2px solid #1d201f;
+}
+
+.exercise-card:active {
+  background-color: #1d201f;
 }
 
 .exercise-card img {
-  width: 64px;
-  height: 64px;
+  width: 60px;
+  height: 60px;
   border-radius: 5px;
-  margin: 0;
   pointer-events: none;
 }
 
@@ -40,4 +43,69 @@
   margin: 0;
   text-transform: capitalize;
   font-weight: 300;
+}
+
+.exercise-card-info {
+  position: absolute;
+  inset: 0;
+  background-color: #111111;
+  height: fit-content;
+}
+
+.exercise-card-info header {
+  display: flex;
+  padding: 1rem;
+  height: 40px;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.exercise-card-info h4 {
+  margin: 0;
+  font-size: 1.125rem;
+  font-weight: 500;
+}
+
+.exercise-card-info .image-container {
+  padding: 1rem 0;
+  margin: 0 1rem;
+  overflow: scroll;
+  white-space: nowrap;
+  max-width: 100vw;
+  max-height: 300px;
+  scroll-snap-type: x mandatory;
+}
+
+.exercise-card-info img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+  scroll-snap-align: start;
+}
+
+.exercise-card-info main {
+  padding: 1rem;
+}
+
+.exercise-card-info main * {
+  margin: 0;
+}
+
+.exercise-card-info main ol {
+  padding-left: 20px;
+  font-weight: 300;
+}
+
+.exercise-card-info main li {
+  padding-left: 10px;
+  padding-bottom: 4px;
+}
+
+.exercise-card-info .muscle-info {
+  padding-top: 2rem;
+}
+
+.muscle-info span {
+  font-weight: 300;
+  text-transform: capitalize;
 }
