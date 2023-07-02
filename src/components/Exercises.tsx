@@ -7,10 +7,12 @@ function Exercises() {
     <ExerciseCard
       key={exercise.id}
       name={exercise.name}
-      bodyPart={exercise.bodyPart}
-      target={exercise.target}
+      force={exercise.force}
       equipment={exercise.equipment}
-      gifUrl={exercise.gifUrl}
+      primaryMuscles={exercise.primaryMuscles}
+      secondaryMuscles={exercise.secondaryMuscles}
+      instructions={exercise.instructions}
+      images={exercise.images}
     />
   ));
 
